@@ -1,0 +1,74 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 05, 2024 at 09:06 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `aimviz`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(550) DEFAULT NULL,
+  `last_name` varchar(550) DEFAULT NULL,
+  `phone` varchar(550) DEFAULT NULL,
+  `email` varchar(550) NOT NULL,
+  `password` varchar(550) NOT NULL,
+  `role` varchar(550) NOT NULL,
+  `image` varchar(550) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `phone`, `email`, `password`, `role`, `image`) VALUES
+(1, 'Muhammad', 'Umer', '342343434535', '1024umer@gmail.com', '$2y$10$Dv5QTfL9hHOYS6uoKVlwUeM3AmamBnWb0ZsC9qtOjGxX0Ng98WzbG', 'user', 'Muhammad_profile.png'),
+(2, 'Testing', 'Terry', '03319222430', 'test@gmail.com', '$2y$10$Ife5HkCn2NscUZFGHKWy/eT8dGijA0MP.FWM4v3FCEijyb3rr4nKS', 'user', 'Testing_avatar_2.jpeg'),
+(3, 'Manager ', 'Here', '03319222430', 'manager@gmail.com', '$2y$10$yZjDg485X30baPhhX8zhHe4Z0Hq5A1HGHOBEt3TERaq/wmK8lks6O', 'manager', 'Manager _24cb03d3-6721-4644-a660-28f81711b0b1.jpeg'),
+(4, 'Admin', 'Here', '64745653', 'admin@gmail.com', '$2y$10$Dv5QTfL9hHOYS6uoKVlwUeM3AmamBnWb0ZsC9qtOjGxX0Ng98WzbG', 'admin', 'Admin_profile.png');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
